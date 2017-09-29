@@ -1,2 +1,21 @@
+a:link{text-decoration: none !important; }
+a:visited{text-decoration: none !important;}
+a:hover{text-decoration: none !important;}
+a:focus{text-decoration: none !important;}
+
+*::-moz-placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.topoFull{height: 50px; background-color: #b9121b;}
 .redes-sociais{background-color: blue; height: 40px;}
 .pesquisa{background-color: yellow; height: 40px;}
+
+
+
+/* MENU */
+.menu-principal ul{}
+.menu-principal ul li, .menu-rodape ul li{list-style: none; display: inline; margin: 0 0 0 10px;}
+.menu-principal ul li a{color: #4c1b1b !important;}
+.menu-principal ul li a:hover{}

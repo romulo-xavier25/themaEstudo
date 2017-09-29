@@ -8,8 +8,6 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
-	<p>teste</p>
 	
 <header>
 	<div class="barra-topo container">
@@ -19,8 +17,13 @@
 		</div>
 	</div>
 
-	<div class="area-menu">
-		<div class="logo">logo</div>
-		<div class="menu-principal">menu</div>
+	<div class="area-menu container">
+		<div class="row">
+			<div class="logo col-md-3">logo</div>
+			<div class="menu-principal col-md-9 text-right">
+				<?php wp_nav_menu(array('theme_location' => 'menu_topo')); ?>
+
+			</div>
+		</div>
 	</div>
 </header>

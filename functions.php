@@ -1,6 +1,7 @@
 <?php
 ob_start();
 
+/* FUNÇÃO PARA CARREGAR OS ARQUIVOS JS E CSS */
 function carrega_scripts(){
     wp_enqueue_style('template', get_template_directory_uri() . '/css/template.css', '1.0', array(), 'all');
     wp_enqueue_script('template', get_template_directory_uri() . '/js/template.js', null, array(), true);
@@ -10,7 +11,16 @@ function carrega_scripts(){
 }
 add_action('wp_enqueue_scripts', 'carrega_scripts');
 
-/* FIM DA FUNÇÃO PARA CARREGAR OS ARQUIVOS JS E CSS */
+
+
+/* FUNÇÃO PARA CARREGAR OS MENUS */
+register_nav_menus(
+    array(
+        'menu_topo' => 'Menu Principal',
+        'menu_rodape' => 'Menu Rodape'
+    )
+);
+
 
 
 function funcao_paginacao(){
