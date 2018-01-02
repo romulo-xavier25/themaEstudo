@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<img class="img-fluid" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+
 <div class="box">
 	<main>
 		<section class="slider container">slider</section>
@@ -9,11 +11,7 @@
 				<aside class="sidebar col-md-3">sidebar</aside>
 				<div class="noticias col-md-9">
 					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-						<h1><?php the_title(); ?></h1>
-						<p>Publicado em: <?php echo get_the_date(); ?> por <?php the_author(); ?> </p>
-						<p>Categorias <?php the_category(' '); ?></p>
-						<p><?php the_tags('Tags: ', ', '); ?></p>
-						<p><?php the_content(); ?></p>
+						<?php get_template_part('content', get_post_format()); ?>
 					<?php endwhile; else: ?> 
 						<p>não tem post publicado.</p>
 					<?php endif; ?>

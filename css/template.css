@@ -8,6 +8,7 @@ a:focus{text-decoration: none !important;}
     text-align: center;
 }
 
+
 .topoFull{height: 50px; background-color: #b9121b;}
 .redes-sociais{background-color: blue; height: 40px;}
 .pesquisa{background-color: yellow; height: 40px;}
@@ -19,3 +20,11 @@ a:focus{text-decoration: none !important;}
 .menu-principal ul li, .menu-rodape ul li{list-style: none; display: inline; margin: 0 0 0 10px;}
 .menu-principal ul li a{color: #4c1b1b !important;}
 .menu-principal ul li a:hover{}
+
+/* PAGES */
+.vermelho{color: red; font-weight: bold;}
+.verde{background-color: green; color: #ffffff; font-weight: bold;}
+
+
+/* CLASSES QUE O WORDPRESS GERA */
+.wp-post-image{float: left; margin: 0 15px 10px 0;}

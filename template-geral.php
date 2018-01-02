@@ -1,8 +1,11 @@
 <?php get_header(); 
 
-// Template Name: Modelo Padrão
+// Template Name: Template Padrão
 
 ?>
+
+<img class="img-fluid" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+
 
 <div class="box-warpper">
 	<main>
