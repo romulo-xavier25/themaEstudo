@@ -1,4 +1,4 @@
-<article>
+<article class="post-format-padrao">
 	<h1><?php the_title(); ?></h1>
 	<?php the_post_thumbnail(array(200,150)); ?>
 	<p>Publicado em: <?php echo get_the_date(); ?> por <?php the_author(); ?> </p>
