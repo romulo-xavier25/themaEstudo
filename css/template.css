@@ -26,9 +26,9 @@ h4{ font-size: 18px; margin-top: 0;}
 /* Header - Menu Principal */
 .area-menu{ background: #f3f3f3; padding: 15px 0; }
 .menu-principal ul{ list-style: none; padding: 0; margin: 0; font-size: 28px; }
-.menu-principal ul li{ display: inline;  margin: 0 30px 0 0;}
+.menu-principal ul li{ display: inline; margin: 0 30px 0 0;}
 .menu-principal ul li:last-child{ margin: 0; }
-.menu-principal ul li a{ text-transform: uppercase; color: #4c1b1b;  text-decoration: none;}
+.menu-principal ul li a{ text-transform: uppercase; color: #4c1b1b; text-decoration: none;}
 .menu-principal ul  li.current-menu-item a{ color:#e58888; }
 
 /* Slide */
@@ -39,7 +39,9 @@ h4{ font-size: 18px; margin-top: 0;}
 
 /* Meio */
 .meio{ padding: 25px 0; }
-.meio h1{ color: #4c1b1b; text-transform: uppercase;  }
+.meio h1{ color: #4c1b1b; text-transform: uppercase; margin-top: 15px; }
+.noticiaDestaque .miniatura{max-height: 300px; overflow: hidden; width: 100%;}
+.noticiaSecundaria .miniatura{max-height: 200px; overflow: hidden;}
 
 /* Meio - Barra Lateral */
 .barra-lateral{ background: #f6e497; padding: 20px; }
@@ -49,9 +51,9 @@ footer{ background: #000; padding: 15px 0; color: #fcfae1; }
 
 /* Rodapé - Menu Secundário */
 .menu-rodape ul{ list-style: none; padding: 0; margin: 0; font-size: 20px; }
-.menu-rodape ul li{ display: inline;  margin: 0 15px 0 0;}
+.menu-rodape ul li{ display: inline; margin: 0 15px 0 0;}
 .menu-rodape ul li:last-child{ margin: 0; }
-.menu-rodape ul li a{ color: #fcfae1;  text-decoration: none;}
+.menu-rodape ul li a{ color: #fcfae1; text-decoration: none;}
 .menu-rodape ul  li.current-menu-item a{ color:#e58888; }
 
 /* Blog */

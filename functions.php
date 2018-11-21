@@ -12,8 +12,6 @@ function carrega_scripts()
 }
 add_action('wp_enqueue_scripts', 'carrega_scripts');
 
-
-
 /* FUNÇÃO PARA CARREGAR OS MENUS */
 register_nav_menus(
     array(
@@ -22,15 +20,13 @@ register_nav_menus(
     )
 );
 
-
-
 function funcao_paginacao()
 {
     global $wp_query;
     $total = $wp_query->max_num_pages;
                   
-    if ( $total > 1 )  {
-        if ( !$current_page = get_query_var('paged') )
+    if ($total > 1)  {
+        if (!$current_page = get_query_var('paged'))
             $current_page = 1;
                           
         $big = 999999999;

@@ -15,7 +15,58 @@
 						<?php get_sidebar('home'); ?>
 					</aside>
 					<div class="noticias col-md-9">
-						<p>Esta será a área de notícias da página home</p>
+						<div class="row">
+
+							<?php 
+
+								$tamanho = 'col-md-12';
+		                        $op_content = 'destaque';
+
+		                        // Quais categorias serão inclusas na nossa listagem?
+								$itens = get_categories(array('include' => '4,5,6'));
+
+								// Para cada categoria encontrada, buscamos um só item dessa categoria
+								foreach($itens as $item):
+
+									// Pegamos cada item dentro do loop para compor nossa consulta
+									$args = array(
+										'category__in' 		=> $item->cat_ID,
+										'posts_per_page' 	=> 1
+									);
+
+									// Criação do objeto da classe WP_Query
+									$consulta = new WP_Query($args);
+
+									// O loop WordPress (consulta padrão modificada)
+									if($consulta->have_posts()):
+										while($consulta->have_posts()):
+											$consulta->the_post();
+
+									// Abaixo, usamos as variáveis $tamanho e $op_content
+									// Na primeira repetição do loop, elas têm o valor indicado acima. Na segunda e terceira, mudam de valor
+									?>
+										<div class="<?php echo $tamanho; ?>">
+											<?php get_template_part('content', $op_content); ?>
+										</div>								
+
+									<?php
+
+										// Esses novos valores só valerão do segundo loop em diante
+										$tamanho = 'col-md-6';
+			                        	$op_content = 'secundaria';
+
+										endwhile;
+										// Reseta a consulta a cada passo do loop
+										wp_reset_postdata();
+
+									endif;
+
+								// Fim do loop foreach
+								endforeach;
+
+							?>
+								
+						</div>
 					</div>
 				</div>
 			</div>
